@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: pointless-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+pointless:
+  purge-rooms-cron: "0 0 0 * * *"
+  purge-connections-cron: "0 0 1 * * *"
+  sse-timeout: 86400000
+  cors:
+    allowed-origins: "*"
