@@ -1,10 +1,11 @@
 # Pointless UI
 
-Pointless UI is a lightweight, open-source web application for agile planning poker. It provides a real-time, collaborative interface for teams to estimate tasks using standard Fibonacci scales or custom values.
+Pointless UI is a lightweight, open-source web application for agile planning poker. It provides a real-time,
+collaborative interface for teams to estimate tasks using standard Fibonacci scales or custom values.
 
 Built with **Vue 3**, **Vite**, **TypeScript**, and **Tailwind CSS**.
 
-## Features
+## 🚀 Features
 
 - **Real-time Collaboration**: See who's in the room and when they've voted.
 - **Role-based Views**:
@@ -14,7 +15,7 @@ Built with **Vue 3**, **Vite**, **TypeScript**, and **Tailwind CSS**.
 - **Live Updates**: Utilizes Server-Sent Events (SSE) for instantaneous UI updates.
 - **Clean UI**: Responsive design powered by Tailwind CSS and Heroicons.
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - **Framework**: [Vue 3](https://vuejs.org/) (Composition API)
 - **Build Tool**: [Vite](https://vitejs.dev/)
@@ -23,43 +24,29 @@ Built with **Vue 3**, **Vite**, **TypeScript**, and **Tailwind CSS**.
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **HTTP Client**: [Axios](https://axios-http.com/)
 
-## Getting Started
+## 🏃 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Node.js (v20.19.0 or >=22.12.0)
 - npm
 
-### Installation
+### 🔧 Local Development
 
 1. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Configure the API URL:
-   Edit `public/config.json` to point to your Pointless backend:
-   ```json
-   {
-     "API_URL": "http://your-backend-api-url/api"
-   }
-   ```
+2. Start the development server:
 
-### Development
+    ```bash
+    npm run dev
+    ```
 
-Start the development server:
-```bash
-npm run dev
-```
+The service will be available at http://localhost:5173 (default Vite port).
 
-### Build
-
-Build the project for production:
-```bash
-npm run build
-```
-
-## Docker Deployment
+### 🐳 Running with Docker
 
 The project includes a `Dockerfile` for easy deployment using Nginx:
 
@@ -75,5 +62,17 @@ The project includes a `Dockerfile` for easy deployment using Nginx:
 
 3. Run the container:
    ```bash
-   docker run -d -p 80:80 pointless-ui
+   docker run -p 8081:80 pointless-ui
    ```
+
+The service will be available at http://localhost:8081.
+
+## ⚙️ Configuration
+
+Configuration can be adjusted in `public/config.json`:
+
+```json
+{
+  "API_URL": "http://localhost:8080/api"
+}
+```

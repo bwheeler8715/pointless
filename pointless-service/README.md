@@ -1,6 +1,8 @@
 # Pointless Service
 
-Pointless Service is a lightweight, Spring Boot-based backend for real-time collaborative voting and planning poker. It provides a RESTful API and Server-Sent Events (SSE) for seamless room management, voting orchestration, and live updates.
+Pointless Service is a lightweight, Spring Boot-based backend for real-time collaborative voting and planning poker. It
+provides a RESTful API and Server-Sent Events (SSE) for seamless room management, voting orchestration, and live
+updates.
 
 ## 🚀 Features
 
@@ -19,15 +21,15 @@ Pointless Service is a lightweight, Spring Boot-based backend for real-time coll
 - **Docker**
 - **In-Memory Storage** (Default)
 
-## 📋 Prerequisites
+## 🏃 Getting Started
+
+### 📋 Prerequisites
 
 - **Java 21** or higher
 - **Maven 3.9+**
 - **Docker** (optional, for containerized deployment)
 
-## 🏃 Getting Started
-
-### Local Development
+### 🔧 Local Development
 
 1. **Build the project**:
    ```bash
@@ -39,9 +41,11 @@ Pointless Service is a lightweight, Spring Boot-based backend for real-time coll
    mvn spring-boot:run
    ```
 
-The service will be available at `http://localhost:8081`.
+The service will be available at http://localhost:8080.
 
-### Running with Docker
+### 🐳 Running with Docker
+
+The project includes a `Dockerfile` for easy deployment using Docker:
 
 1. **Build the JAR**:
    ```bash
@@ -58,20 +62,25 @@ The service will be available at `http://localhost:8081`.
    docker run -p 8080:8080 pointless-service
    ```
 
+The service will be available at http://localhost:8080.
+
 ## 📡 API Overview
 
 ### Room Endpoints
+
 - `POST /api/room/get` - Get current room state.
 - `POST /api/room/create` - Create a new voting room.
 - `POST /api/room/join` - Join an existing room.
 - `POST /api/room/leave` - Leave a room.
 
 ### Voting Endpoints
+
 - `POST /api/room/open` - Open voting for a room.
 - `POST /api/room/close` - Close voting and reveal results.
 - `POST /api/room/vote` - Cast a vote.
 
 ### Real-time Updates
+
 - `GET /api/room/{roomId}/stream` - Subscribe to SSE stream for live updates.
 
 ## ⚙️ Configuration
@@ -79,6 +88,9 @@ The service will be available at `http://localhost:8081`.
 Configuration can be adjusted in `src/main/resources/application.yaml`:
 
 ```yaml
+server:
+  port: 8080
+
 pointless:
   purge-rooms-cron: "0 0 0 * * *"       # Daily at midnight
   purge-connections-cron: "0 0 1 * * *" # Daily at 1 AM
