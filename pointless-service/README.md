@@ -41,7 +41,7 @@ updates.
    mvn spring-boot:run
    ```
 
-The service will be available at http://localhost:8080.
+The service will be available at http://localhost:8081.
 
 ### 🐳 Running with Docker
 
@@ -59,10 +59,10 @@ The project includes a `Dockerfile` for easy deployment using Docker:
 
 3. **Run the container**:
    ```bash
-   docker run -p 8080:8080 pointless-service
+   docker run -p 8081:8081 pointless-service
    ```
 
-The service will be available at http://localhost:8080.
+The service will be available at http://localhost:8081.
 
 ## 📡 API Overview
 
@@ -89,7 +89,7 @@ Configuration can be adjusted in `src/main/resources/application.yaml`:
 
 ```yaml
 server:
-  port: 8080
+  port: 8081
 
 pointless:
   purge-rooms-cron: "0 0 0 * * *"       # Daily at midnight

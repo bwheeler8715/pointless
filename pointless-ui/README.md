@@ -62,10 +62,10 @@ The project includes a `Dockerfile` for easy deployment using Nginx:
 
 3. Run the container:
    ```bash
-   docker run -p 8081:80 pointless-ui
+   docker run -p 8080:8080 pointless-ui
    ```
 
-The service will be available at http://localhost:8081.
+The service will be available at http://localhost:8080.
 
 ## ⚙️ Configuration
 
@@ -73,6 +73,6 @@ Configuration can be adjusted in `public/config.json`:
 
 ```json
 {
-  "API_URL": "http://localhost:8080/api"
+  "API_URL": "http://localhost:8081/api"
 }
 ```

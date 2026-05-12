@@ -5,10 +5,10 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
 
-const response = await fetch('/config.json');
-const runtimeConfig = await response.json();
+const configResponse = await fetch(`/config.json?t=${new Date().getTime()}`);
+const config = await configResponse.json();
 
 const pointless = createApp(App)
-pointless.provide('config', runtimeConfig)
+pointless.provide('config', config)
 pointless.use(router)
 pointless.mount('#app')

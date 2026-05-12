@@ -65,7 +65,7 @@ docker build -t pointless .
 Run the container:
 
 ```bash
-docker run -p 8080:80 pointless
+docker run -p 8080:8080 pointless
 ```
 
 The application will be available at http://localhost:8080.
@@ -78,7 +78,7 @@ If you prefer to run the components separately for development:
 
 1. `cd pointless-service`
 2. `mvn spring-boot:run`
-3. Backend runs on http://localhost:8080.
+3. Backend runs on http://localhost:8081.
 
 ### Frontend (`pointless-ui`)
 
