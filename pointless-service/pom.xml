@@ -6,7 +6,7 @@
     <name>pointless-service</name>
     <groupId>com.bwheeler8715</groupId>
     <artifactId>pointless-service</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <properties>
         <!-- Java and Encoding -->
