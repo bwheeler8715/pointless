@@ -11,6 +11,11 @@ management:
       exposure:
         include: health
 
+logging:
+  structured:
+    format:
+      console: ecs
+
 pointless:
   purge-rooms-cron: "0 0 0 * * *"
   purge-connections-cron: "0 0 1 * * *"
